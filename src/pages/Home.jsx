@@ -73,10 +73,9 @@ const Home = () => {
     }
 
     function calculateMostPopularCity(breweries) {
-        // Create an object to store the count of each city
+
         const cityCounts = {};
     
-        // Iterate through the breweries array and count occurrences of each city
         breweries.forEach(brewery => {
         const city = brewery.city;
         if (cityCounts[city]) {
@@ -86,7 +85,6 @@ const Home = () => {
         }
         });
     
-        // Find the city with the highest count
         let mostPopularCity = '';
         let maxCount = 0;
     
@@ -104,10 +102,9 @@ const Home = () => {
     }
 
     function calculateMostPopularState(breweries) {
-        // Create an object to store the count of each state
+
         const stateCounts = {};
     
-        // Iterate through the breweries array and count occurrences of each city
         breweries.forEach(brewery => {
         const state = brewery.state;
         if (stateCounts[state]) {
@@ -117,7 +114,6 @@ const Home = () => {
         }
         });
     
-        // Find the city with the highest count
         let mostPopularState = '';
         let maxCount = 0;
     
@@ -193,10 +189,6 @@ const Home = () => {
 
         return distance;
     }
-    
-    // Example usage:
-    const distance = getDistanceFromLatLonInMiles(41.8781, -87.6298, 34.0522, -118.2437);
-    console.log(distance); // Output distance between Chicago and Los Angeles in miles
 
 
     return (

@@ -6,19 +6,6 @@ body{
   margin:0;
 }
 
-.bar-box{
-  background: grey;
-  width:80vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin:20px 0;
-}
-.bar-box div p{
-  background: rgb(143, 73, 73);
-  border:2px solid black;
-  border-radius: 10px;
-}
 .table-container {
   margin: 50px auto; 
   width: 80vw; 
@@ -106,7 +93,7 @@ button:hover{
 
 .stats-box{
   padding:2em 1em;
-  background:rgb(222, 186, 107);
+  background:rgb(186, 156, 90);
   border:2px solid white;
   border-radius:0.5em;
   margin:0 20px;
@@ -144,7 +131,7 @@ button:active{
   animation-iteration-count: infinite;
 }
 img{
-  width:35%;
+  width:25%;
   display: block;
   margin:0 auto;
   transition: 0.3s;
@@ -192,7 +179,7 @@ img:hover{
   border-radius: 20px;
   display: block;
   margin:auto auto;
-  font-size: 2em;
+  font-size: 1.75em;
   transition: 0.3s;
 }
 

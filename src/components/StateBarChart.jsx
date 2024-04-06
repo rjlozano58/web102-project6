@@ -49,7 +49,7 @@ const StateBarChart = ({ bars }) => {
         ticks: {
           color:'white',
           font: {
-            size: 20, // Change the font size of the x-axis labels
+            size: 20,
             color:'white'
           },
         },
@@ -58,7 +58,7 @@ const StateBarChart = ({ bars }) => {
         ticks: {
           color:'white',
           font: {
-            size: 20, // Change the font size of the y-axis labels
+            size: 20, 
           },
         },
       },
@@ -69,7 +69,7 @@ const StateBarChart = ({ bars }) => {
         text: 'Number of Bars in Each State',
         color:'white',
         font: {
-          weight: 'bold', // Make the title bold
+          weight: 'bold',
         },
       },
       subtitle: {
@@ -77,14 +77,14 @@ const StateBarChart = ({ bars }) => {
         text: 'Your Subtitle Here',
         color:'white',
         font: {
-          weight: 'bold', // Make the subtitle bold
+          weight: 'bold',
         },
       },
       legend: {
         labels: {
           color:'white',
           font: {
-            size: 12, // Change the font size of the legend labels
+            size: 12,
           },
         },
       },

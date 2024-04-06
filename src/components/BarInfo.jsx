@@ -23,11 +23,9 @@ const BarInfo = () => {
       <div className="info-container">
         <div className='name-box info-box'>
           <p>Name: {bar.name}</p>
-          {/* <p>{bar.name}</p> */}
         </div>
         <div className='address-box info-box'>
           <p>Address: {bar.street}, {bar.city}, {bar.state}</p>
-          {/* <p>{bar.street}, {bar.city}, {bar.state}</p> */}
         </div>
         <div className='website-box info-box'>
           { bar.website_url ? (
