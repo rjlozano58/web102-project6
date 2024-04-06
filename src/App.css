@@ -1,0 +1,191 @@
+body{
+  background: rgb(0, 58, 0);
+  color:white;
+  font-family: Helvetica;
+  font-weight: 300;
+  margin:0;
+}
+
+.bar-box{
+  background: grey;
+  width:80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin:20px 0;
+}
+.bar-box div p{
+  /* background:black; */
+  background: rgb(143, 73, 73);
+  border:2px solid black;
+  border-radius: 10px;
+}
+
+table{
+  max-width: 80%;
+  background:rgb(0, 58, 0);
+  display: block;
+  margin: 0 auto;
+  padding:10px;
+}
+
+th, td{
+  border:1px solid white;
+  border-radius: 5px;
+  max-width: 30vw;
+  padding:10px;
+  transition: 0.3s;
+}
+td:hover{
+  background-color: white;
+  color:green;
+}
+
+th:hover{
+  background-color: white;
+  color:green;
+}
+
+a{
+  color:white;
+  outline: none;
+  text-decoration:none;
+}
+a:hover{
+  color:green;
+  outline: none;
+  text-decoration:none;
+}
+
+.filter-container{
+  padding:20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+input{
+  height:2em;
+  width:50%;
+
+}
+
+button{
+  background: rgb(0, 58, 0);
+  border: 1px solid white;
+  color:white;
+  border-radius: 5px;
+  padding:8px;
+  transition:0.3s;
+  margin:0 20px;
+}
+
+button:hover{
+  background: white;
+  color:green;
+  border: 1px solid green;
+}
+
+.search-container{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.stats{
+  padding:20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.stats-box{
+  padding:2em 1em;
+  background:rgb(222, 186, 107);
+  border:2px solid white;
+  border-radius:0.5em;
+  margin:0 20px;
+  transition: 0.3s;
+}
+
+.stats-box:hover{
+  background:white;
+  color: rgb(222, 186, 107);
+}
+
+p{
+  text-align: center;
+
+}
+
+button:active{
+  transform: scale(1.1);
+}
+
+.title{
+  text-align: center;
+  padding:20px;
+  background:#382b25;
+  width:fit-content;
+  margin:20px auto;
+  border-radius: 5px;
+
+  
+}
+
+.title:hover{
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+img{
+  width:35%;
+  display: block;
+  margin:0 auto;
+  transition: 0.3s;
+}
+img:hover{
+  /* transform: rotate(90deg); */
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+  
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;  
+  background-color: rgb(6, 173, 28);
+  padding:20px;
+  justify-content: space-between;
+
+}
+
+.nav-title{
+  text-align: left;
+  background: black;
+  padding:10px;
+  border-radius: 10px;
+  margin:auto 0;
+  font-size: 30px;
+
+}
+.links-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: right;
+  background:grey;
+  width:30vw;
+
+}
+.links-container div{
+  padding:10px;
+
+}
+
