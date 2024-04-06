@@ -201,13 +201,13 @@ const Home = () => {
 
     return (
         <>
+
         <Navbar/>
 
         <h1 className='title'>Total Bars: {totalBars}</h1>
 
-        
-
-        <img src="https://imgix.ranker.com/list_img_v2/1264/541264/original/the-very-best-of-the-drunk-baby-meme-u2?fit=crop&fm=pjpg&q=80&dpr=2&w=1200&h=720"/>
+        {/* <img src="https://imgix.ranker.com/list_img_v2/1264/541264/original/the-very-best-of-the-drunk-baby-meme-u2?fit=crop&fm=pjpg&q=80&dpr=2&w=1200&h=720"/> */}
+        <img src="https://media1.tenor.com/m/HmbunwazK9sAAAAC/drunk.gif"/>
 
         <div className='search-container'>
             <input type="text" value={search} onChange={updateSearch} placeholder="Search bars by name..."></input>
@@ -229,12 +229,14 @@ const Home = () => {
             <h2 className='stats-box'>Most Popular City: {popCity}</h2>
             <h2 className='stats-box'>Closest City to Chicago: <a target="_blank" href={closestBarLink}>{closestBar}</a></h2>
         </div>
-        
+
+
+
         <div className='state-chart'><StateBarChart bars={allBars} /></div>
 
 
             {searchBars.length > 0 || !search==="" ? (
-
+            <div className='table-container'>
             <table >
                 <thead>
                 <tr>
@@ -262,38 +264,45 @@ const Home = () => {
                 ))}
                 </tbody>
             </table>
+            </div>
+
 
         ) : (
             <div>
-            <p>No bars found matching the search criteria. Here are all Brewries!</p>
-            <table >
-                <thead>
-                    <tr>
-                    <th>Name</th>
-                    <th>Street</th>
-                    <th>City</th>
-                    <th>State</th>
-                    <th>Website</th>
-                    <th>Phone</th>
-                    <th>Approx. Distance from Chicago</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {allBars.map(bar => (
-                    <tr key={bar.id}>
-                        <td><Link to={`/barinfo/${bar.name}`}>{bar.name}</Link></td>
-                        <td>{bar.street}</td>
-                        <td>{bar.city}</td>
-                        <td>{bar.state}</td>
-                        <td><a target="_blank"  href={bar.website_url}>{bar.website_url}</a></td>
-                        <td>{bar.phone}</td>
-                        <td>{getDistanceFromLatLonInMiles(chiLat, chiLong, bar.longitude, bar.latitude)} miles</td>
-                    </tr>
-                    ))}
-                </tbody>
+                <p>No bars found matching the search criteria. Here are all Brewries!</p>
+                
+                <div className='table-container'>
+
+                <table >
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Street</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Website</th>
+                        <th>Phone</th>
+                        <th>Approx. Distance from Chicago</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {allBars.map(bar => (
+                        <tr key={bar.id}>
+                            <td><Link to={`/barinfo/${bar.name}`}>{bar.name}</Link></td>
+                            <td>{bar.street}</td>
+                            <td>{bar.city}</td>
+                            <td>{bar.state}</td>
+                            <td><a target="_blank"  href={bar.website_url}>{bar.website_url}</a></td>
+                            <td>{bar.phone}</td>
+                            <td>{getDistanceFromLatLonInMiles(chiLat, chiLong, bar.longitude, bar.latitude)} miles</td>
+                        </tr>
+                        ))}
+                    </tbody>
                 </table>
+                </div>
             </div>
         )}
+
         </>
     )
 }

@@ -15,46 +15,50 @@ body{
   margin:20px 0;
 }
 .bar-box div p{
-  /* background:black; */
   background: rgb(143, 73, 73);
   border:2px solid black;
   border-radius: 10px;
 }
+.table-container {
+  margin: 50px auto; 
+  width: 80vw; 
+  overflow-x: auto; 
 
-table{
-  max-width: 80%;
-  background:rgb(0, 58, 0);
-  display: block;
-  margin: 0 auto;
-  padding:10px;
 }
 
-th, td{
-  border:1px solid white;
-  border-radius: 5px;
-  max-width: 30vw;
-  padding:10px;
+table {
+  background: rgb(0, 58, 0);
+  width: 100%; 
+  border-collapse: collapse;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(0, 83, 0);
+}
+
+th, td {
+  padding: 10px;
   transition: 0.3s;
-}
-td:hover{
-  background-color: white;
-  color:green;
+  text-align: left;
 }
 
-th:hover{
+td:hover, th:hover {
   background-color: white;
-  color:green;
+  color: green;
 }
 
-a{
-  color:white;
+a {
+  color: rgb(190, 190, 190);
   outline: none;
-  text-decoration:none;
+  text-decoration: none;
 }
-a:hover{
-  color:green;
+
+a:hover {
+  color: green;
   outline: none;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .filter-container{
@@ -84,6 +88,7 @@ button:hover{
   background: white;
   color:green;
   border: 1px solid green;
+  transform: scale(1.2);
 }
 
 .search-container{
@@ -168,45 +173,72 @@ img:hover{
 
 .nav-title{
   text-align: left;
-  background: black;
   padding:10px;
   border-radius: 10px;
   margin:auto 0;
   font-size: 30px;
-
 }
+
 .links-container{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   text-align: right;
-  background:grey;
   width:30vw;
 
 }
 .links-container div{
   padding:10px;
-  background: pink;
+  border-radius: 20px;
   display: block;
   margin:auto auto;
+  font-size: 2em;
+  transition: 0.3s;
+}
+
+.links-container div:hover{
+  background: white;
+  color:green;
+  transform: scale(1.2);
+
 }
 
 .info-container{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  background:rgb(0, 105, 14);
+  color:white;
+  border-radius: 10px;
+  width:70vw;
+  margin:20px auto;
+  transition: 0.5s;
+  padding:20px;
 }
 
-.info-box{
-  background: white;
-  color:black;
-  width:20vw;
-  height: 500px;
+
+.info-container:hover{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:white;
+  color:green;
   border-radius: 10px;
-  border: 2px solid black;
+  width:70vw;
+  margin:20px auto;
+
 }
+
+
+.info-box{
+  font-size: 30px;
+  width:70vw;
+  height: fit-content;
+  display: flex;
+}
+
 .info-box p a {
-  color:rgb(0, 0, 0);
+  color:rgb(195, 193, 193);
 }
 
 .info-box p a:hover {
@@ -215,10 +247,21 @@ img:hover{
 
 .state-chart{
   /* background:white; */
-  width:75vw;
+  width:80vw;
   border-radius: 10px;
   display: block;
-  margin: 10px auto;
+  margin: 50px auto;
   box-shadow: 0 0 30px black;
   padding:20px;
+}
+
+.chart-table-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.bar-info-title{
+  display: flex;
+  justify-content: center;
+  text-shadow: 0 0 8px white;
 }

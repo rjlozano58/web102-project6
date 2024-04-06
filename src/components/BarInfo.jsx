@@ -17,21 +17,21 @@ const BarInfo = () => {
     <>
       <Navbar />
 
-      <h1>More info on {id}...</h1>
+    
+        <h1 className='bar-info-title'>{id}</h1>
 
       <div className="info-container">
         <div className='name-box info-box'>
-          <p>Name</p>
-          <p>{bar.name}</p>
+          <p>Name: {bar.name}</p>
+          {/* <p>{bar.name}</p> */}
         </div>
         <div className='address-box info-box'>
-          <p>Address</p>
-          <p>{bar.street}, {bar.city}, {bar.state}</p>
+          <p>Address: {bar.street}, {bar.city}, {bar.state}</p>
+          {/* <p>{bar.street}, {bar.city}, {bar.state}</p> */}
         </div>
         <div className='website-box info-box'>
-          <p>Website</p>
           { bar.website_url ? (
-            <p><a target="_blank" href={bar.website_url}>{bar.website_url}</a></p>
+            <p>Website: <a target="_blank" href={bar.website_url}>{bar.website_url}</a></p>
           ) : (
             <p>No website:/</p>
           )
@@ -39,8 +39,13 @@ const BarInfo = () => {
             }
         </div>
         <div className='phone-box info-box'>
-          <p>Phone</p>
-          <p>{bar.phone}</p>
+            { bar.phone ? (
+            <p>Phone: {bar.phone}</p>
+          ) : (
+            <p>No Phone Number:/</p>
+          )
+          
+            }
         </div>
         
       </div>
