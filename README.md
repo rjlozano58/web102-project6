@@ -1,8 +1,24 @@
-# React + Vite
+Project 6
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🎯 Goals
+By the end of this assignment you will be able to...
 
-Currently, two official plugins are available:
+    [x] Use React Router to build navigation around the application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    [x] Use Link to dynamically generate a list of routes
+
+    [x] Use useParams() hook to extract parameters from a URL
+
+    [x] Install and integrate an npm library into an existing React app
+
+Required Features
+
+    [x] Add Data Visualizations
+
+    [x] The app includes at least one unique chart developed using the fetched data that tell an interesting story
+
+    [x] Add Links to Detail View
+
+    [x] Clicking on an item in the list view displays more details about it
+
+    [x] Each detail view of an item has a direct, unique link to that item’s detail view page
