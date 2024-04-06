@@ -3,6 +3,9 @@ import '../App.css'
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
+import { Link } from 'react-router-dom'
+import StateBarChart from '../components/StateBarChart';
+
 
 const Home = () => {
 
@@ -202,6 +205,8 @@ const Home = () => {
 
         <h1 className='title'>Total Bars: {totalBars}</h1>
 
+        
+
         <img src="https://imgix.ranker.com/list_img_v2/1264/541264/original/the-very-best-of-the-drunk-baby-meme-u2?fit=crop&fm=pjpg&q=80&dpr=2&w=1200&h=720"/>
 
         <div className='search-container'>
@@ -211,11 +216,11 @@ const Home = () => {
         
 
 
-        <div class="filter-container">
-            <button class="filter-btn" onClick={showAllBars}>All Breweries</button>
-            <button class="filter-btn" onClick={searchByName}>Show All From Search</button>
-            <button class="filter-btn" onClick={handleWebsite}>Has Website</button>
-            <button class="filter-btn" onClick={handlePhone}>Has Phone Number</button>
+        <div className="filter-container">
+            <button className="filter-btn" onClick={showAllBars}>All Breweries</button>
+            <button className="filter-btn" onClick={searchByName}>Show All From Search</button>
+            <button className="filter-btn" onClick={handleWebsite}>Has Website</button>
+            <button className="filter-btn" onClick={handlePhone}>Has Phone Number</button>
         </div>
 
         <div className='stats'>
@@ -225,6 +230,9 @@ const Home = () => {
             <h2 className='stats-box'>Closest City to Chicago: <a target="_blank" href={closestBarLink}>{closestBar}</a></h2>
         </div>
         
+        <div className='state-chart'><StateBarChart bars={allBars} /></div>
+
+
             {searchBars.length > 0 || !search==="" ? (
 
             <table >
@@ -241,15 +249,16 @@ const Home = () => {
                 </thead>
                 <tbody>
                 {searchBars.map(bar => (
-                    <tr key={bar.id}>
-                    <td>{bar.name}</td>
-                    <td>{bar.street}</td>
-                    <td>{bar.city}</td>
-                    <td>{bar.state}</td>
-                    <td><a target="_blank" href={bar.website_url}>{bar.website_url}</a></td>
-                    <td>{bar.phone}</td>
-                    <td>{getDistanceFromLatLonInMiles(chiLat, chiLong, bar.longitude, bar.latitude)} miles</td>
-                    </tr>
+                        <tr key={bar.id}>
+                        <td><Link to={`/barinfo/${bar.name}`}>{bar.name}</Link></td>
+                        <td>{bar.street}</td>
+                        <td>{bar.city}</td>
+                        <td>{bar.state}</td>
+                        <td><a target="_blank" href={bar.website_url}>{bar.website_url}</a></td>
+                        <td>{bar.phone}</td>
+                        <td>{getDistanceFromLatLonInMiles(chiLat, chiLong, bar.longitude, bar.latitude)} miles</td>
+                        </tr>
+
                 ))}
                 </tbody>
             </table>
@@ -272,7 +281,7 @@ const Home = () => {
                 <tbody>
                     {allBars.map(bar => (
                     <tr key={bar.id}>
-                        <td>{bar.name}</td>
+                        <td><Link to={`/barinfo/${bar.name}`}>{bar.name}</Link></td>
                         <td>{bar.street}</td>
                         <td>{bar.city}</td>
                         <td>{bar.state}</td>
